@@ -43,7 +43,7 @@ export function Neweventim() {
     setLoading(true);
 
     try {
-      const { error } = await Supabase.from("Events")
+      const { error } = await Supabase.from("events")
         .insert([
           {
             title: title || null,

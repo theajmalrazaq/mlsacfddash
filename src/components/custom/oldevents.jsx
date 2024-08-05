@@ -61,9 +61,9 @@ export default function Oldevents() {
   useEffect(() => {
     const fetchEvents = async () => {
       setLoading(true); // Set loading to true before fetching data
-      const { data, error } = await Supabase.from("Events")
+      const { data, error } = await Supabase.from("events")
         .select("*")
-        .order("Id", { ascending: false });
+        .order("id", { ascending: false });
       if (error) {
         setError(error);
         console.log(error);
@@ -77,7 +77,7 @@ export default function Oldevents() {
   }, []);
 
   const handleUpdate = async () => {
-    const { error } = await Supabase.from("Events")
+    const { error } = await Supabase.from("events")
       .update({
         title: title || null,
         date: date || null,
@@ -88,7 +88,7 @@ export default function Oldevents() {
         img_url: imgUrl || null,
         description: description || null,
       })
-      .eq("Id", String(selectedEvent.Id));
+      .eq("id", String(selectedEvent.id));
 
     if (error) {
       toast({
@@ -103,7 +103,7 @@ export default function Oldevents() {
     } else {
       setEvents((prevEvents) =>
         prevEvents.map((event) =>
-          event.Id === selectedEvent.Id
+          event.id === selectedEvent.id
             ? {
                 ...event,
                 title: title || null,
@@ -133,9 +133,9 @@ export default function Oldevents() {
   };
 
   const deleteEvent = async () => {
-    const { error } = await Supabase.from("Events")
+    const { error } = await Supabase.from("events")
       .delete()
-      .eq("Id", String(eventToDelete.Id));
+      .eq("id", String(eventToDelete.id));
     if (error) {
       toast({
         title: "Failed!!",
@@ -143,7 +143,7 @@ export default function Oldevents() {
       });
     } else {
       setEvents((prevEvents) =>
-        prevEvents.filter((event) => event.Id !== eventToDelete.Id)
+        prevEvents.filter((event) => event.id !== eventToDelete.id)
       );
       setEventToDelete(null); // Close dialog
     }
@@ -181,7 +181,7 @@ export default function Oldevents() {
               <TableBody>
                 {events.length > 0 ? (
                   events.map((event) => (
-                    <TableRow key={event.Id}>
+                    <TableRow key={event.id}>
                       <TableCell className="font-medium text-start">
                         {event.title}
                       </TableCell>
