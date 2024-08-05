@@ -27,7 +27,7 @@ export default function Navbarmenu(e) {
         </Link>
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
           <Link
-            to="/home"
+            to="home"
             className={`transition-colors hover:text-foreground ${
               e.activetab == "home"
                 ? "text-foreground"
@@ -37,7 +37,7 @@ export default function Navbarmenu(e) {
             Manage Events
           </Link>
           <Link
-            to="/newevent"
+            to="newevent"
             className={` transition-colors hover:text-foreground ${
               e.activetab == "newevent"
                 ? "text-foreground"
@@ -47,7 +47,7 @@ export default function Navbarmenu(e) {
             Schedule Event
           </Link>
           <Link
-            to="/inductions"
+            to="inductions"
             className={`transition-colors hover:text-foreground ${
               e.activetab == "inductions"
                 ? "text-foreground"
@@ -57,7 +57,7 @@ export default function Navbarmenu(e) {
             Inductions Responses
           </Link>
           <Link
-            to="/members"
+            to="members"
             className={` transition-colors hover:text-foreground ${
               e.activetab == "members"
                 ? "text-foreground"
@@ -67,7 +67,7 @@ export default function Navbarmenu(e) {
             Manage Members
           </Link>
           <Link
-            to="/contact"
+            to="contact"
             className={` transition-colors hover:text-foreground ${
               e.activetab == "contact"
                 ? "text-foreground"
@@ -137,7 +137,7 @@ export default function Navbarmenu(e) {
                 <span>MLSA CFD</span>
               </Link>
               <Link
-                to="/home"
+                to="home"
                 className={`transition-colors hover:text-foreground ${
                   e.activetab == "home"
                     ? "text-foreground"
@@ -147,7 +147,7 @@ export default function Navbarmenu(e) {
                 Manage Events
               </Link>
               <Link
-                to="/newevent"
+                to="newevent"
                 className={` transition-colors hover:text-foreground ${
                   e.activetab == "newevent"
                     ? "text-foreground"
@@ -157,7 +157,7 @@ export default function Navbarmenu(e) {
                 Schedule Event
               </Link>
               <Link
-                to="/inductions"
+                to="inductions"
                 className={`transition-colors hover:text-foreground ${
                   e.activetab == "inductions"
                     ? "text-foreground"
@@ -167,7 +167,7 @@ export default function Navbarmenu(e) {
                 Inductions Respones
               </Link>
               <Link
-                to="/members"
+                to="members"
                 className={` transition-colors hover:text-foreground ${
                   e.activetab == "members"
                     ? "text-foreground"
@@ -177,7 +177,7 @@ export default function Navbarmenu(e) {
                 Manage Members
               </Link>
               <Link
-                to="/contact"
+                to="contact"
                 className={` transition-colors hover:text-foreground ${
                   e.activetab == "contact"
                     ? "text-foreground"
