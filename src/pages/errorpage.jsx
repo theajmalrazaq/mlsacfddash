@@ -1,3 +1,4 @@
+import Loading from "@/components/custom/loading";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +11,7 @@ export function Errorpage() {
 
   return (
     <div>
-      <h1>Redirecting...</h1>
+      <Loading />
     </div>
   );
 }
