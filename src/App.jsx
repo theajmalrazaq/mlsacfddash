@@ -1,5 +1,5 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { LoginForm } from "./pages/login";
 import { Home } from "./pages/home";
 import { Newevent } from "./pages/Newevent";
@@ -11,42 +11,21 @@ import { Contact } from "./pages/contact";
 import { Errorpage } from "./pages/errorpage";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <LoginForm />,
-    },
-    {
-      path: "home",
-      element: <Home />,
-    },
-    {
-      path: "newevent",
-      element: <Newevent />,
-    },
-    {
-      path: "inductions",
-      element: <InductionData />,
-    },
-    {
-      path: "members",
-      element: <Members />,
-    },
-    {
-      path: "Contact",
-      element: <Contact />,
-    },
-    {
-      path: "*",
-      element: <Errorpage />,
-    },
-  ]);
-
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="App">
         <Toaster />
-        <RouterProvider router={router} />
+        <HashRouter>
+          <Routes>
+            <Route path="/mlsacfddash" element={<LoginForm />} />
+            <Route path="home" element={<Home />} />
+            <Route path="newevent" element={<Newevent />} />
+            <Route path="inductions" element={<InductionData />} />
+            <Route path="members" element={<Members />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="*" element={<Errorpage />} />
+          </Routes>
+        </HashRouter>
       </div>
     </ThemeProvider>
   );
