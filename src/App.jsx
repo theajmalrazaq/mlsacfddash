@@ -15,7 +15,7 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="App">
         <Toaster />
-        <HashRouter>
+        <HashRouter basename="login">
           <Routes>
             <Route path="/" element={<LoginForm />} />
             <Route path="home" element={<Home />} />
