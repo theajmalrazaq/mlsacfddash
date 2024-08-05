@@ -376,7 +376,7 @@ export default function InductionResponses() {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <Card className="mt-8 h-96 overflow-scroll">
+      <Card className="mt-8 h-96 overflow-y-scroll">
         <CardContent>
           <Table>
             <TableHeader>
