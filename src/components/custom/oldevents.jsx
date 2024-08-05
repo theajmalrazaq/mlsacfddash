@@ -159,7 +159,8 @@ export default function Oldevents() {
         <CardTitle>Manage Events</CardTitle>
         <CardDescription>Manage Old Events and their details</CardDescription>
       </CardHeader>
-      <Card className="mt-8 h-96 overflow-y-scroll">
+
+      <Card className="mt-8 h-96  scrollbar-thin  overflow-y-scroll">
         <CardContent>
           {loading ? ( // Show loading component while fetching data
             <Loading />
@@ -190,8 +191,7 @@ export default function Oldevents() {
                       <TableCell className="hidden md:table-cell text-start">
                         {event.date}
                       </TableCell>
-                      <TableCell className="text-left">
-                        {" "}
+                      <TableCell className="text-start">
                         {/* Align actions to the left */}
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>

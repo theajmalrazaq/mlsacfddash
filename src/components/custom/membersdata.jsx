@@ -213,7 +213,7 @@ export default function Membersdata() {
         </DropdownMenu>
       </div>
 
-      <Card className="mt-8 h-96 overflow-y-scroll">
+      <Card className="mt-8 h-96 scrollbar-thin overflow-y-scroll">
         <CardContent>
           <Table>
             <TableHeader>
@@ -232,11 +232,17 @@ export default function Membersdata() {
                     <TableCell className="font-medium text-start capitalize">
                       {response.name}
                     </TableCell>
-                    <TableCell>{response.roll_no}</TableCell>
-                    <TableCell>{response.nu_email}</TableCell>
-                    <TableCell>{response.whatsapp_no}</TableCell>
+                    <TableCell className="text-start">
+                      {response.roll_no}
+                    </TableCell>
+                    <TableCell className="text-start">
+                      {response.nu_email}
+                    </TableCell>
+                    <TableCell className="text-start">
+                      {response.whatsapp_no}
+                    </TableCell>
 
-                    <TableCell className="flex gap-2">
+                    <TableCell className="flex gap-2 text-start">
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                           <Button

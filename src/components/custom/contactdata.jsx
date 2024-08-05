@@ -200,7 +200,7 @@ export default function Contactdata() {
         </DropdownMenu>
       </div>
 
-      <Card className="mt-8 h-96 overflow-y-scroll">
+      <Card className="mt-8 h-96 scrollbar-thin overflow-y-scroll">
         <CardContent>
           {loading ? (
             <Loading />
@@ -302,7 +302,7 @@ export default function Contactdata() {
             open={Boolean(responseToView)}
             onOpenChange={(open) => !open && setResponseToView(null)}
           >
-            <AlertDialogContent>
+            <AlertDialogContent className="overflow-x-hidden overflow-y-auto">
               <AlertDialogHeader>
                 <AlertDialogTitle>Message</AlertDialogTitle>
                 <AlertDialogDescription>
