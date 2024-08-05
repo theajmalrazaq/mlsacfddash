@@ -6,7 +6,7 @@ export function Errorpage() {
   let navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/mlsaacfddash");
+    navigate("/");
   }, [navigate]);
 
   return (
