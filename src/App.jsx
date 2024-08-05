@@ -17,7 +17,7 @@ function App() {
         <Toaster />
         <HashRouter>
           <Routes>
-            <Route path="mlsacfddash" element={<LoginForm />} />
+            <Route path="index.html" element={<LoginForm />} />
             <Route path="home" element={<Home />} />
             <Route path="newevent" element={<Newevent />} />
             <Route path="inductions" element={<InductionData />} />
