@@ -29,8 +29,9 @@ import {
 export function Neweventim() {
   const { toast } = useToast();
   const [title, setTitle] = useState("");
-  const [date, setDate] = useState(""); // Date as a string
+  const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const [speaker, setspeaker] = useState("");
   const [linkPrimary, setLinkPrimary] = useState("");
   const [linkSecondary, setLinkSecondary] = useState("");
   const [location, setLocation] = useState("");
@@ -54,6 +55,7 @@ export function Neweventim() {
             location: location || null,
             img_url: imgUrl || null,
             description: description || null,
+            speaker: speaker || null,
           },
         ])
         .select();
@@ -70,6 +72,7 @@ export function Neweventim() {
         setLocation("");
         setImgUrl("");
         setDescription("");
+        setspeaker("");
 
         toast({
           title: "Posted!!",
@@ -119,6 +122,11 @@ export function Neweventim() {
               placeholder="Event Title"
             />
             <Input
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="Description"
+            />
+            <Input
               value={date}
               onChange={(e) => setDate(e.target.value)}
               placeholder="Event Date (e.g., October 06, 2023)"
@@ -144,14 +152,14 @@ export function Neweventim() {
               placeholder="Location"
             />
             <Input
+              value={speaker}
+              onChange={(e) => setspeaker(e.target.value)}
+              placeholder="Speaker"
+            />
+            <Input
               value={imgUrl}
               onChange={(e) => setImgUrl(e.target.value)}
               placeholder="Image URL"
-            />
-            <Input
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              placeholder="Description"
             />
 
             <Button type="submit" disabled={loading}>
