@@ -213,13 +213,13 @@ export default function Membersdata() {
         </DropdownMenu>
       </div>
 
-      <Card className="mt-8 h-96 scrollbar-thin overflow-y-scroll">
+      <Card className="mt-8 h-72 scrollbar-thin overflow-y-scroll">
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
                 <TableHead>Name</TableHead>
-                <TableHead>Roll No</TableHead>
+                <TableHead className="pl-0">Roll No</TableHead>
                 <TableHead>Email</TableHead>
                 <TableHead>Whatsapp</TableHead>
                 <TableHead>Actions</TableHead>

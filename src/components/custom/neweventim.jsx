@@ -104,7 +104,7 @@ export function Neweventim() {
         <CardTitle>Schedule New Event</CardTitle>
         <CardDescription>Schedule New Event to Website</CardDescription>
       </CardHeader>
-      <Card className="mt-8 p-4 pt-8 h-96 scrollbar-thin  overflow-y-scroll">
+      <Card className="mt-8  pt-8 h-96 scrollbar-thin  overflow-y-scroll">
         <CardContent>
           <form
             onSubmit={(e) => {

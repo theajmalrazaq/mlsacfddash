@@ -200,7 +200,7 @@ export default function Contactdata() {
         </DropdownMenu>
       </div>
 
-      <Card className="mt-8 h-96 scrollbar-thin overflow-y-scroll">
+      <Card className="mt-8 h-72 scrollbar-thin overflow-y-scroll">
         <CardContent>
           {loading ? (
             <Loading />
