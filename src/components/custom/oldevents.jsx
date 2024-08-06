@@ -353,7 +353,7 @@ export default function Oldevents() {
           target="_blank"
           className="text-orange-600 text-left"
         >
-          Ajmal Razaq Bhatti
+          <strong> Ajmal Razaq Bhatti</strong>
         </a>
       </div>
     </>

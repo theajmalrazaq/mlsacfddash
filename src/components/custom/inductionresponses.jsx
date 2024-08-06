@@ -443,7 +443,9 @@ export default function InductionResponses() {
                             : "destructive"
                         }
                         className={
-                          response.status === true ? "bg-green-600 " : ""
+                          response.status === true
+                            ? "bg-green-600 text-white border-none"
+                            : ""
                         }
                       >
                         {response.status === null
@@ -469,7 +471,7 @@ export default function InductionResponses() {
                             onClick={() => confirmUpdateStatus(response, true)}
                           >
                             <CheckCircle className="mr-2 h-4 w-4" />
-                            Accept
+                            Select
                           </DropdownMenuItem>
                           <DropdownMenuItem
                             onClick={() => confirmUpdateStatus(response, false)}
@@ -518,7 +520,7 @@ export default function InductionResponses() {
           target="_blank"
           className="text-orange-600 text-left"
         >
-          Ajmal Razaq Bhatti
+          <strong> Ajmal Razaq Bhatti</strong>
         </a>
       </div>
       {/* Confirm Delete Dialog */}
@@ -557,7 +559,7 @@ export default function InductionResponses() {
             <AlertDialogTitle>Confirm Status Update</AlertDialogTitle>
             <AlertDialogDescription>
               Are you sure you want to{" "}
-              {confirmationStatus ? "accept" : "reject"} this response?
+              {confirmationStatus ? "Select" : "Reject"} this response?
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
@@ -572,7 +574,7 @@ export default function InductionResponses() {
                   : "bg-red-600 text-white"
               }
             >
-              {confirmationStatus ? "Accept" : "Reject"}
+              {confirmationStatus ? "Select" : "Reject"}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

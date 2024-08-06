@@ -172,7 +172,7 @@ export function Neweventim() {
           target="_blank"
           className="text-orange-600 text-left"
         >
-          Ajmal Razaq Bhatti
+          <strong> Ajmal Razaq Bhatti</strong>
         </a>
       </div>
       <AlertDialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
