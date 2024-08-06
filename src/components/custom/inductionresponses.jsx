@@ -513,7 +513,11 @@ export default function InductionResponses() {
       </div>
       <div className="h-10 text-xs flex float-start mt-2">
         Developed by &#160;
-        <a href="#" className="text-orange-600 text-left">
+        <a
+          href="https://theajmalrazaq.github.io"
+          target="_blank"
+          className="text-orange-600 text-left"
+        >
           Ajmal Razaq Bhatti
         </a>
       </div>
