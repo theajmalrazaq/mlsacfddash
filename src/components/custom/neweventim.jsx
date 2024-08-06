@@ -165,7 +165,12 @@ export function Neweventim() {
           </div>
         </CardFooter>
       </Card>
-
+      <div className="h-10 text-xs flex float-start mt-6">
+        Developed by &#160;
+        <a href="#" className="text-orange-600 text-left">
+          Ajmal Razaq Bhatti
+        </a>
+      </div>
       <AlertDialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>

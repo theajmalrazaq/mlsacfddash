@@ -508,8 +508,14 @@ export default function InductionResponses() {
         </CardContent>
       </Card>
       <div className="text-xs w-full flex mt-6 text-muted-foreground">
-        Showing <strong> &#160;1-10&#160;</strong> of
+        Showing
         <strong>&#160;{filteredResponses.length}&#160;</strong> responses
+      </div>
+      <div className="h-10 text-xs flex float-start mt-2">
+        Developed by &#160;
+        <a href="#" className="text-orange-600 text-left">
+          Ajmal Razaq Bhatti
+        </a>
       </div>
       {/* Confirm Delete Dialog */}
       <AlertDialog
