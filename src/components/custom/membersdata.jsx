@@ -229,7 +229,7 @@ export default function Membersdata() {
               {filteredResponses.length > 0 ? (
                 filteredResponses.map((response) => (
                   <TableRow key={response.id}>
-                    <TableCell className="font-medium text-start capitalize">
+                    <TableCell className="text-start capitalize p-0">
                       {response.name}
                     </TableCell>
                     <TableCell className="text-start">
@@ -311,7 +311,11 @@ export default function Membersdata() {
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction onClick={deleteResponse} disabled={loading}>
+                <AlertDialogAction
+                  onClick={deleteResponse}
+                  disabled={loading}
+                  className="bg-red-600 text-white"
+                >
                   {loading ? "Deleting..." : "Delete"}
                 </AlertDialogAction>
               </AlertDialogFooter>

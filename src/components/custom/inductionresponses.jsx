@@ -413,7 +413,7 @@ export default function InductionResponses() {
               ) : (
                 filteredResponses.map((response) => (
                   <TableRow key={response.id}>
-                    <TableCell className="capitalize text-start">
+                    <TableCell className="capitalize text-start p-0">
                       {response.name}
                     </TableCell>
                     <TableCell className="text-start">

@@ -331,7 +331,10 @@ export default function Oldevents() {
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction onClick={deleteEvent}>
+                <AlertDialogAction
+                  onClick={deleteEvent}
+                  className="bg-red-600 text-white"
+                >
                   Delete
                 </AlertDialogAction>
               </AlertDialogFooter>

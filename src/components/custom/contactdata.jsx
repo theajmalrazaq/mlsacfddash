@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Search, File, FileDown } from "lucide-react";
+import { Search, File, FileDown, Eye, Mail } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -221,7 +221,7 @@ export default function Contactdata() {
                 {filteredResponses.length > 0 ? (
                   filteredResponses.map((response) => (
                     <TableRow key={response.id}>
-                      <TableCell className="font-medium text-start capitalize">
+                      <TableCell className="font-medium text-start capitalize p-0">
                         {response.Name}
                       </TableCell>
                       <TableCell className="text-start">
@@ -238,18 +238,20 @@ export default function Contactdata() {
                       <TableCell>
                         <div className="flex gap-2">
                           <Button
-                            size="sm"
+                            size="icon"
+                            variant="outline"
                             onClick={() => setResponseToView(response)}
                           >
-                            View
+                            <Eye className="w-4" />
                           </Button>
                           <Button
-                            size="sm"
+                            size="icon"
+                            variant="outline"
                             onClick={() =>
                               window.open(`mailto:${response.Email}`)
                             }
                           >
-                            Send Email
+                            <Mail className="w-4" />
                           </Button>
                           <Button
                             size="sm"
@@ -289,7 +291,11 @@ export default function Contactdata() {
               </AlertDialogHeader>
               <AlertDialogFooter>
                 <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction onClick={deleteResponse} disabled={loading}>
+                <AlertDialogAction
+                  onClick={deleteResponse}
+                  disabled={loading}
+                  className="bg-red-600 text-white"
+                >
                   {loading ? "Deleting..." : "Delete"}
                 </AlertDialogAction>
               </AlertDialogFooter>
